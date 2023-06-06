@@ -1,0 +1,209 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo">
+        <a img src="" alt=""> </a>
+      </h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="#about">Armada</a></li>
+          <li>
+            <a class="nav-link scrollto" href="syarat&ketentuan.html">Syarat & <spain>Ketentuan</spain></a>
+          </li>
+          <li><a class="nav-link scrollto" href="kontak.html">Kontak</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Log out</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h2>Pilihan terbaik untuk solusi perentalan kendaraan</h2>
+      <h1>Turbo <span>Rents</span></h1>
+      <h3>Booking now</h3>
+      <h3>081278098229</h3>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <!-- ======= Featured Services Section ======= -->
+  <section id="order" class="centered-text">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h2>TurboRents</h2>
+      <h1></h1>
+    </div>
+    <section id="order" class="centered-text">
+      <div class="containerabt container text-center" data-aos="zoom-out" data-aos-delay="100">
+        <h2>About Us</h2>
+        <h1>
+          Selamat datang di website rental mobil TurboRents. TurboRents merupakan sebuah website perentalan mobil yang bertujuan untuk memenuhi kebutuhan bisnis, instansi, pariwisata,dan kepentingan keluarga di Kota Semarang dan
+          sekitarnya. TurboRents menawarkan rental mobil dengan berbagai jenis dan harga yang sesuai dengan kebutuhan klien.
+        </h1>
+        <h3>Pilihlah Armada Kami</h3>
+      </div>
+
+      <div class="container image-container">
+        <div class="row row-cols-3">
+          <div class="col my-3">
+            <div class="image-box test rounded-4 text-center">
+              <h3 class="">AGYA</h3>
+              <hr />
+              <img src="assets/img/agla.png" alt="" />
+              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
+            </div>
+          </div>
+
+          <div class="col my-3">
+            <div class="image-box test rounded-4 text-center">
+              <h3 class="">SIGRA</h3>
+              <hr />
+              <img src="assets/img/sigra.png" alt="" />
+              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
+            </div>
+          </div>
+
+          <div class="col my-3">
+            <div class="image-box test rounded-4 text-center">
+              <h3 class="">AVANZA</h3>
+              <hr />
+              <img src="assets/img/image 2.png" alt="" />
+              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
+            </div>
+          </div>
+
+          <div class="col my-3">
+            <div class="image-box test rounded-4 text-center">
+              <h3 class="">FORTUNER</h3>
+              <hr />
+              <img src="assets/img/image 6.png" alt="" />
+              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
+            </div>
+          </div>
+
+          <div class="col my-3">
+            <div class="image-box test rounded-4 text-center">
+              <h3 class="">INNOVA</h3>
+              <hr />
+              <img src="assets/img/image 3.png" alt="" />
+              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
+            </div>
+          </div>
+
+          <div class="col my-3">
+            <div class="image-box test rounded-4 text-center">
+              <h3 class="">PAJERO SPORT</h3>
+              <hr />
+              <img src="assets/img/image 5.png" alt="" />
+              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <div id="bodyfrm" class="container">
+    <h2>FORM PEMESANAN</h2>
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nama</label>
+        <input type="text" class="form-control w-75" aria-describedby="emailHelp" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Alamat</label>
+        <input type="text" class="form-control w-75" aria-describedby="emailHelp" />
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col col-lg-3">
+          <label for="exampleInputEmail1" class="form-label">Jenis Kendaraan</label>
+          <select class="form-select w-75" aria-label="Default select example">
+            <option selected></option>
+            <option value="1">Avanza</option>
+            <option value="2">Pajero Sport</option>
+            <option value="3">Fortuner</option>
+          </select>
+        </div>
+
+        <div class="mb-3 col col-lg-3">
+          <label for="exampleInputEmail1" class="form-label">Tanggal Mulai</label>
+          <input type="date" class="form-control w-75" aria-describedby="emailHelp" />
+        </div>
+
+        <div class="mb-3 col col-lg-3">
+          <label for="exampleInputEmail1" class="form-label">Tanggal Berakhir</label>
+          <input type="date" class="form-control w-75" aria-describedby="emailHelp" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="mb-3 col">
+          <label for="exampleInputEmail1" class="form-label">Harga</label>
+          <input type="text" class="form-control w-50" aria-describedby="emailHelp" />
+        </div>
+
+        <div class="mb-3 col">
+          <label for="exampleInputEmail1" class="form-label">Payment</label>
+          <input type="text" class="form-control w-50" aria-describedby="emailHelp" />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-dangerfrm">Cetak Pemesanan</button>
+    </form>
+  </div>
+
+  <div class="faq">
+    <h1>FAQ</h1>
+    <h2>Pertanyaan yang sering ditanyakan oleh pelanggan kami</h2>
+  </div>
+
+  <div class="container">
+    <div class="faq-question">
+      <h2>Bagaimana sistem pembayarannya?</h2>
+      <p></p>
+      <h2>Apa saja yg diperlukan untuk merental mobil?</h2>
+      <p></p>
+      <h2>Berapa batas usia untuk merental mobil?</h2>
+      <p></p>
+      <h2>Apakah saya bisa merental mobil untuk teman atau orang lain?</h2>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="container my-5">
+      <div class="rectangle text-center rounded-4">
+        <h1 class="pt-5">
+          Mau Konsultasi dan Booking? <br />
+          Chat me!
+        </h1>
+        <p>
+          <button type="button" class="btn btn-danger mt-3">Whatsapp</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="Alamat">
+      <h1>Alamat</h1>
+      <h2>
+        Kel. Sekaran, Kec. Gn. Pati,<br />
+        Kota Semarang, Jawa Tengah 50229
+      </h2>
+    </div>
+  </div>
+
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+
+{% endblock content %}
