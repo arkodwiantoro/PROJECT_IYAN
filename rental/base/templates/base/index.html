@@ -9,15 +9,15 @@
         <a img src="" alt=""> </a>
       </h1>
 
-      <nav id="navbar" class="navbar">
+      <nav id="navbar" class="navbar mt-3">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
-          <li><a class="nav-link scrollto" href="#about">Armada</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'galery' %}">Galery</a></li>
           <li>
-            <a class="nav-link scrollto" href="syarat&ketentuan.html">Syarat & <spain>Ketentuan</spain></a>
+            <a class="nav-link scrollto" href="{% url 'syarat-ketentuan' %}">Syarat & Ketentuan</a>
           </li>
-          <li><a class="nav-link scrollto" href="kontak.html">Kontak</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Log out</a></li>
+          <li><a class="nav-link scrollto" href="">Kontak</a></li>
+          <li><a class="nav-link scrollto" href="">Log out</a></li>
         </ul>
       </nav>
       
@@ -42,7 +42,7 @@
       <h1></h1>
     </div>
     <section id="order" class="centered-text">
-      <div class="containerabt container text-center" data-aos="zoom-out" data-aos-delay="100">
+      <div class="containerabt container text-center mb-3" data-aos="zoom-out" data-aos-delay="100">
         <h2>About Us</h2>
         <h1>
           Selamat datang di website rental mobil TurboRents. TurboRents merupakan sebuah website perentalan mobil yang bertujuan untuk memenuhi kebutuhan bisnis, instansi, pariwisata,dan kepentingan keluarga di Kota Semarang dan
@@ -57,7 +57,7 @@
             <div class="image-box test rounded-4 text-center">
               <h3 class="">AGYA</h3>
               <hr />
-              <img src="assets/img/agla.png" alt="" />
+              <img src="{% static 'assets/img/agla.png' %}" alt="" />
               <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
             </div>
           </div>
@@ -66,7 +66,7 @@
             <div class="image-box test rounded-4 text-center">
               <h3 class="">SIGRA</h3>
               <hr />
-              <img src="assets/img/sigra.png" alt="" />
+              <img src="{% static 'assets/img/sigra.png' %}" alt="" />
               <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
             </div>
           </div>
@@ -75,7 +75,7 @@
             <div class="image-box test rounded-4 text-center">
               <h3 class="">AVANZA</h3>
               <hr />
-              <img src="assets/img/image 2.png" alt="" />
+              <img src="{% static 'assets/img/image 2.png' %}" alt="" />
               <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
             </div>
           </div>
@@ -84,7 +84,7 @@
             <div class="image-box test rounded-4 text-center">
               <h3 class="">FORTUNER</h3>
               <hr />
-              <img src="assets/img/image 6.png" alt="" />
+              <img src="{% static 'assets/img/image 6.png' %}" alt="" />
               <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
             </div>
           </div>
@@ -93,7 +93,7 @@
             <div class="image-box test rounded-4 text-center">
               <h3 class="">INNOVA</h3>
               <hr />
-              <img src="assets/img/image 3.png" alt="" />
+              <img src="{% static 'assets/img/image 3.png' %}" alt="" />
               <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
             </div>
           </div>
@@ -102,7 +102,7 @@
             <div class="image-box test rounded-4 text-center">
               <h3 class="">PAJERO SPORT</h3>
               <hr />
-              <img src="assets/img/image 5.png" alt="" />
+              <img src="{% static 'assets/img/image 5.png' %}" alt="" />
               <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
             </div>
           </div>
@@ -111,7 +111,7 @@
     </section>
   </section>
 
-  <div id="bodyfrm" class="container">
+  <div id="bodyfrm" class="container rounded ps-5 py-5">
     <h2>FORM PEMESANAN</h2>
     <form>
       <div class="mb-3">
@@ -144,15 +144,16 @@
           <input type="date" class="form-control w-75" aria-describedby="emailHelp" />
         </div>
       </div>
+
       <div class="row">
-        <div class="mb-3 col">
+        <div class="mb-3 col-sm-3">
           <label for="exampleInputEmail1" class="form-label">Harga</label>
-          <input type="text" class="form-control w-50" aria-describedby="emailHelp" />
+          <input type="text" class="form-control" aria-describedby="emailHelp" />
         </div>
 
-        <div class="mb-3 col">
+        <div class="mb-3 col-sm-3">
           <label for="exampleInputEmail1" class="form-label">Payment</label>
-          <input type="text" class="form-control w-50" aria-describedby="emailHelp" />
+          <input type="text" class="form-control" aria-describedby="emailHelp" />
         </div>
       </div>
       <button type="submit" class="btn btn-dangerfrm">Cetak Pemesanan</button>
@@ -165,14 +166,11 @@
   </div>
 
   <div class="container">
-    <div class="faq-question">
-      <h2>Bagaimana sistem pembayarannya?</h2>
-      <p></p>
-      <h2>Apa saja yg diperlukan untuk merental mobil?</h2>
-      <p></p>
-      <h2>Berapa batas usia untuk merental mobil?</h2>
-      <p></p>
-      <h2>Apakah saya bisa merental mobil untuk teman atau orang lain?</h2>
+    <div class="faq-question ms-5">
+      <h2 class="ps-5 py-2">Bagaimana sistem pembayarannya?</h2>
+      <h2 class="ps-5 py-2">Apa saja yg diperlukan untuk merental mobil?</h2>
+      <h2 class="ps-5 py-2">Berapa batas usia untuk merental mobil?</h2>
+      <h2 class="ps-5 py-2">Apakah saya bisa merental mobil untuk teman atau orang lain?</h2>
     </div>
   </div>
 
@@ -180,7 +178,7 @@
     <div class="container my-5">
       <div class="rectangle text-center rounded-4">
         <h1 class="pt-5">
-          Mau Konsultasi dan Booking? <br />
+          Mau Konsultasi dan Booking? <br/>
           Chat me!
         </h1>
         <p>
@@ -191,13 +189,21 @@
   </div>
 
   <div class="container">
-    <div class="Alamat">
+   <div class="row">
+    
+    <div class="Alamat col text-center">
       <h1>Alamat</h1>
-      <h2>
+      <h2 class="text-start ms-5">
         Kel. Sekaran, Kec. Gn. Pati,<br />
         Kota Semarang, Jawa Tengah 50229
       </h2>
     </div>
+
+    <div class="Alamat col text-center">
+      <h1>Support Payments</h1>
+    </div>
+
+   </div>
   </div>
 
   <!-- End Footer -->

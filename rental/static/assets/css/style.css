@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Montserrat, 'Open Sans', sans-serif;
   background: #222222;
   color: #444444;
 }
@@ -38,41 +38,6 @@ h6 {
   font-family: 'Roboto', sans-serif;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-#preloader:before {
-  content: '';
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #106eea;
-  border-top-color: #e2eefd;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -803,13 +768,13 @@ section {
 }
 
 .faq-question h2 {
-  padding-left: 80px;
+  /* padding-left: 80px; */
   color: #ffffff;
   font-size: 25px;
   font-family: Montserrat;
-  display: inline-block;
+  /* display: inline-block; */
   border-bottom: 1px solid #ffffff;
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
   width: 80%;
 }
 .rectangle {
@@ -834,15 +799,14 @@ section {
 /*Alamat*/
 
 .Alamat h1 {
-  padding-left: 120px;
+  /* padding-left: 120px; */
   color: #ffffff;
   font-family: Hepta Slab;
 }
 .Alamat h2 {
-  padding-right: 70%;
   color: #ffffff;
   font-size: 20px;
-  text-align: center;
+  font-weight: 400;
   font-family: Montserrat;
 }
 
@@ -850,25 +814,10 @@ section {
 
 #bodyfrm {
   background-color: #e66a72;
-  width: 10000px;
-  height: 500px;
-}
-/* #bodyfrm .container .h2 {
-  font-family: Montserrat;
-  text-align: center;
-  margin-top: -8%;
-  margin-bottom: 50px;
+  width: 1500px;
+  height: 550px;
 }
 
-#bodyfrm .form-group {
-  align-items: center;
-  margin-bottom: 20px;
-  color: #222222;
-}
-
-#bodyfrm .mb-3 {
-  color: #222222;
-} */
 #bodfrm .container .h1 {
   color: #00ff26;
 }
@@ -901,14 +850,6 @@ section {
   border: 2px #fff solid;
 }
 
-/* .gamabr-glr {
-  display: cen;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin-left: 300px;
-  margin-top: 30px;
-} */
 
 /* Syarat Dan Ketentuan */
 
@@ -996,4 +937,29 @@ section {
   color: #e70000;
   width: 50%;
   font-size: 20px;
+}
+
+
+#galery h1{
+  color: #fff;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+#galery p{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+#syarat h1{
+  color: #fff;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+#syarat p{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
 }

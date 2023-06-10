@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<div id="galery">
+    <div class="container">
+        <div class="mt-4">
+            <img src="{% static 'assets/img/logomobil.png' %}" />
+        </div>
+    
+        <div class="row">
+            <div class="col">
+                <h1>TurboRents</h1>
+            </div>
+            <div class="col">
+                <p>Pilihan terbaik <br>untuk solusi perentalan kendaraan</p>
+            </div>
+        </div>
+
+        <div class="row row-cols-4 mt-5">
+            <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
+            <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
+            <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
+            <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
+            <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
+            <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
+        </div>
+    
+    </div>
+</div>
+
+{% endblock content %}
