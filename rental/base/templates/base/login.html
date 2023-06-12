@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link class="icon" rel="icon" type="image/png" href="{% static 'assets/img/logo_car3.png' %}" />
+    <title>Login</title>
+    <!--My Style-->
+    <link rel="stylesheet" href="{% static 'assets/css/login.css' %}"/>
+  </head>
+
+  <body>
+    <section>
+      <div class="form-box">
+        
+        {% if page == 'login' %}
+
+        <form action="" method="POST">
+            {% csrf_token %}
+          <h2>Login</h2>
+
+          {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }} text-danger"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+          {% endif %}
+
+          <div class="inputbox">
+            <ion-icon name="person-sharp"></ion-icon>
+            <label for="username"></label>
+            <input type="username" name="username" id="username" placeholder="Username" required autocomplete="off" />
+          </div>
+          <div class="inputbox">
+            <ion-icon id="hide1" name="eye-off-sharp"></ion-icon>
+            <label for="password"></label>
+            <input type="password" name="password" id="password" placeholder="Password" required autocomplete="off" />
+          </div>
+          <button type="submit" name="login">Log In</button>
+          <div class="register">
+            <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+          </div>
+        </form>
+
+        {% else %}
+
+        <form action="" method="POST">
+            {% csrf_token %}
+          <h2>Login</h2>
+
+          {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }} text-danger"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+          {% endif %}
+
+          <div class="inputbox">
+            <label for="username"></label>
+            {{ form.username }}
+          </div>
+
+          <div class="inputbox">
+            <label for="email"></label>
+            {{ form.email }}
+          </div>
+
+          <div class="inputbox">
+            <label for="password"></label>
+            {{ form.password1 }}
+          </div>
+
+          <div class="inputbox">
+            <label for="password"></label>
+            {{ form.password2 }}
+          </div>
+
+          <button type="submit" name="login">Register</button>
+          <div class="register">
+            <p>Have an account? <a href="{% url 'login' %}">Login</a></p>
+          </div>
+        </form>
+
+        {% endif %}
+
+      </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

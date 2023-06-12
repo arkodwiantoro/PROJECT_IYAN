@@ -40,56 +40,12 @@
               <h3 class="">{{ armada.name }}</h3>
               <hr />
               <img src="{{ armada.imageURL }}" alt="" />
-              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
+              <a href="https://wa.me/6282234908760" type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</a>
             </div>
           </div>
 
           {% endfor %}
 
-          <div class="col my-3">
-            <div class="image-box test rounded-4 text-center">
-              <h3 class="">SIGRA</h3>
-              <hr />
-              <img src="{% static 'assets/img/sigra.png' %}" alt="" />
-              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
-            </div>
-          </div>
-
-          <div class="col my-3">
-            <div class="image-box test rounded-4 text-center">
-              <h3 class="">AVANZA</h3>
-              <hr />
-              <img src="{% static 'assets/img/image 2.png' %}" alt="" />
-              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
-            </div>
-          </div>
-
-          <div class="col my-3">
-            <div class="image-box test rounded-4 text-center">
-              <h3 class="">FORTUNER</h3>
-              <hr />
-              <img src="{% static 'assets/img/image 6.png' %}" alt="" />
-              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
-            </div>
-          </div>
-
-          <div class="col my-3">
-            <div class="image-box test rounded-4 text-center">
-              <h3 class="">INNOVA</h3>
-              <hr />
-              <img src="{% static 'assets/img/image 3.png' %}" alt="" />
-              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
-            </div>
-          </div>
-
-          <div class="col my-3">
-            <div class="image-box test rounded-4 text-center">
-              <h3 class="">PAJERO SPORT</h3>
-              <hr />
-              <img src="{% static 'assets/img/image 5.png' %}" alt="" />
-              <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -125,12 +81,33 @@
   </div>
 
   <div class="container">
-    <div class="faq-question ms-5">
-      <h2 class="ps-5 py-2">Bagaimana sistem pembayarannya?</h2>
-      <h2 class="ps-5 py-2">Apa saja yg diperlukan untuk merental mobil?</h2>
-      <h2 class="ps-5 py-2">Berapa batas usia untuk merental mobil?</h2>
-      <h2 class="ps-5 py-2">Apakah saya bisa merental mobil untuk teman atau orang lain?</h2>
-    </div>
+    <details>
+      <summary>
+        <h2 class="text-light ps-5 py-2">Bagaimana sistem pembayarannya?</h2>
+      </summary>
+      <p class="mx-5">Sistem pembayaran dapat dilakukan pada WhatsApp. Jadi, setelah user mengisi formulir pendaftaran, user akan diarahkan ke WhatsApp dan memilih metode pembayaran yang tersedia. Lalu, setelah user melakukan pembayaran, user perlu melakukan konfirmasi kepada admin. 
+      </p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="text-light ps-5 py-2">Apa saja yang diperlukan untuk merental mobil?</h2>
+      </summary>
+      <p class="mx-5">Untuk dapat merental mobil, user perlu mengisi formulir pendaftaran yang tersedia pada website ini.
+      </p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="text-light ps-5 py-2">Berapa batas usia untuk merental mobil?</h2>
+      </summary>
+      <p class="mx-5">Batas minimal usia untuk merental mobil adalah 17 tahun atau minimal sudah memiliki KTP karena pada saat merental mobil akan dimintai KTP sebagai identitas perental.</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="text-light ps-5 py-2">Apakah saya bisa merental mobil untuk teman atau orang lain?</h2>
+      </summary>
+      <p class="mx-5">Pada website kami, user bebas menggunakan mobil untuk hal apapun asalkan dengan mengikuti syarat dan ketentuan yang berlaku.</p>
+    </details>
+  
   </div>
 
   <div class="box">
@@ -141,7 +118,7 @@
           Chat me!
         </h1>
         <p>
-          <button type="button" class="btn btn-danger mt-3">Whatsapp</button>
+          <a href="https://wa.me/6282234908760" type="button" class="btn btn-danger mt-3">Whatsapp</a>
         </p>
       </div>
     </div>
