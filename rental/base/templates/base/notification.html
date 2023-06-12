@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notification Orderan Sukses</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+    body {
+      margin-top: 300px;
+    }
+
+    .notification {
+      width: 350px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    .notification-icon {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background-color: #4CAF50;
+      border-radius: 50%;
+      color: white;
+      font-size: 40px;
+      line-height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .notification-text {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .notification-details {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .notification a {
+      text-decoration: none;
+      outline: none;
+      border-radius: 4px;
+      padding: 4px 6px;
+      color: #f2f2f2 ;
+      font-size: 20px;
+      margin-top: 20px;
+      margin-left: 130px;
+      background-color:red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="notification">
+    <div class="notification-icon">&#10003;</div>
+    <div class="notification-text">Orderan Sukses!</div>
+    <div class="notification-details">
+      <strong>Jenis Mobil: </strong>  {{ order.armada.name }}<span id="jenisMobil"></span><br>
+      <strong>Durasi:</strong> {{ order.durasi }} Hari <span id="durasi"></span><br>
+      <strong>Tanggal Pemesanan:</strong> {{ order.tgl_mulai }} <span id="tanggal"></span><br>
+      <strong>Total Biaya:</strong> Rp. {{ order.total_price }} <span id="totalBiaya"></span><br>
+
+      <a class="submit" href="{% url 'home' %}">Kembali</a>
+    </div>
+  </div>
+
+  <script>
+    // Mendapatkan data dari URL (misalnya dengan menggunakan query string)
+    const urlParams = new URLSearchParams(window.location.search);
+    const jenisMobil = urlParams.get('jenisMobil');
+    const durasi = urlParams.get('durasi');
+    const tanggal = urlParams.get('tanggal');
+    const totalBiaya = urlParams.get('totalBiaya');
+
+    // Menampilkan data pada halaman
+    document.getElementById('jenisMobil').innerText = jenisMobil;
+    document.getElementById('durasi').innerText = durasi;
+    document.getElementById('tanggal').innerText = tanggal;
+    document.getElementById('totalBiaya').innerText = totalBiaya;
+  </script>
+</body>
+</html>

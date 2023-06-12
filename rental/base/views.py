@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 
 from .models import Armada, Testi, Order
 from .forms import OrderForm, UserForm
@@ -21,7 +22,7 @@ def home(request):
             form = form.save(commit=False)
             form.user = request.user 
             form.save()
-            return redirect('home')
+            return redirect(reverse('notifikasi', kwargs={'pk':form.id}))
         
     context = {
         'armadas': armada,
@@ -116,3 +117,12 @@ def register_page(request):
     }
 
     return render(request, 'base/login.html', context)
+
+def notif(request, pk):
+    order = Order.objects.get(id=pk)
+
+    context = {
+        'order': order,
+    }
+
+    return render(request, 'base/notification.html', context)
