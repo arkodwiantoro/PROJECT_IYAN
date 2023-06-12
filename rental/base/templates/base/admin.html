@@ -1,0 +1,73 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h2>Pilihan terbaik untuk solusi perentalan kendaraan</h2>
+      <h1>Turbo <span>Rents</span></h1>
+      <h3>Booking now</h3>
+      <h3>081278098229</h3>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+<section id="adm">
+  <div class="container">
+    <div class="title text-center">
+      <h1>Orders</h1>
+    </div>
+
+    <div class="bg-light rounded py-4 ps-5">
+      <form method="get">
+        {{ myFilter.form }}
+
+        <button class="btn btn-primary" type="submit">Search</button>
+
+      </form>
+    </div>
+  
+    <div class="bg-light mt-4 rounded p-2 ">
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Armada</th>
+            <th scope="col">User</th>
+            <th scope="col">Tanggal Mulai</th>
+            <th scope="col">Durasi</th>
+            <th scope="col">Status</th>
+            <th scope="col">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {% for order in orders %}
+          <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ order.armada.name }}</td>
+            <td>{{ order.user.username }}</td>
+            <td>{{ order.tgl_mulai }}</td>
+            <td>{{ order.durasi }} hari</td>
+            <td>{{ order.status }}</td>
+            <td>
+              <a href="">Edit</a>
+              <a href="">Delete</a>
+            </td>
+          </tr>
+
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+{% endblock content %}

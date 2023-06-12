@@ -19,7 +19,10 @@
         </div>
 
         <div class="row row-cols-4 mt-5">
-            <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
+
+            {% for t in testi %}
+            <img class="col my-3" src="{{ t.imageURL }}" alt="" />
+            {% endfor %}
             <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
             <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />
             <img class="col my-3" src="{% static 'assets/img/galery.png' %}" alt="" />

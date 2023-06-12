@@ -3,27 +3,6 @@
 
 {% block content %}
 
-<header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo">
-        <a img src="" alt=""> </a>
-      </h1>
-
-      <nav id="navbar" class="navbar mt-3">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
-          <li><a class="nav-link scrollto" href="{% url 'galery' %}">Galery</a></li>
-          <li>
-            <a class="nav-link scrollto" href="{% url 'syarat-ketentuan' %}">Syarat & Ketentuan</a>
-          </li>
-          <li><a class="nav-link scrollto" href="">Kontak</a></li>
-          <li><a class="nav-link scrollto" href="">Log out</a></li>
-        </ul>
-      </nav>
-      
-    </div>
-  </header>
-
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
@@ -53,14 +32,19 @@
 
       <div class="container image-container">
         <div class="row row-cols-3">
+
+          {% for armada in armadas %}
+
           <div class="col my-3">
             <div class="image-box test rounded-4 text-center">
-              <h3 class="">AGYA</h3>
+              <h3 class="">{{ armada.name }}</h3>
               <hr />
-              <img src="{% static 'assets/img/agla.png' %}" alt="" />
+              <img src="{{ armada.imageURL }}" alt="" />
               <button type="button" class="btn btn-danger mb-3">Booking Via Whatsapp</button>
             </div>
           </div>
+
+          {% endfor %}
 
           <div class="col my-3">
             <div class="image-box test rounded-4 text-center">
@@ -113,51 +97,26 @@
 
   <div id="bodyfrm" class="container rounded ps-5 py-5">
     <h2>FORM PEMESANAN</h2>
-    <form>
+
+    <form method="post">
+      {% csrf_token %}
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Nama</label>
-        <input type="text" class="form-control w-75" aria-describedby="emailHelp" />
+        <label class="form-label">Jenis Kendaraan</label>
+        {{ form.armada }}
       </div>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Alamat</label>
-        <input type="text" class="form-control w-75" aria-describedby="emailHelp" />
+        <label class="form-label">Tanggal Mulai</label>
+        {{ form.tgl_mulai }}
       </div>
 
-      <div class="row">
-        <div class="mb-3 col col-lg-3">
-          <label for="exampleInputEmail1" class="form-label">Jenis Kendaraan</label>
-          <select class="form-select w-75" aria-label="Default select example">
-            <option selected></option>
-            <option value="1">Avanza</option>
-            <option value="2">Pajero Sport</option>
-            <option value="3">Fortuner</option>
-          </select>
-        </div>
-
-        <div class="mb-3 col col-lg-3">
-          <label for="exampleInputEmail1" class="form-label">Tanggal Mulai</label>
-          <input type="date" class="form-control w-75" aria-describedby="emailHelp" />
-        </div>
-
-        <div class="mb-3 col col-lg-3">
-          <label for="exampleInputEmail1" class="form-label">Tanggal Berakhir</label>
-          <input type="date" class="form-control w-75" aria-describedby="emailHelp" />
-        </div>
+      <div class="mb-3">
+        <label class="form-label">Durasi</label>
+        {{ form.durasi }}
       </div>
 
-      <div class="row">
-        <div class="mb-3 col-sm-3">
-          <label for="exampleInputEmail1" class="form-label">Harga</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp" />
-        </div>
-
-        <div class="mb-3 col-sm-3">
-          <label for="exampleInputEmail1" class="form-label">Payment</label>
-          <input type="text" class="form-control" aria-describedby="emailHelp" />
-        </div>
-      </div>
       <button type="submit" class="btn btn-dangerfrm">Cetak Pemesanan</button>
     </form>
+
   </div>
 
   <div class="faq">
